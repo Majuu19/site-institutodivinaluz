@@ -8,26 +8,29 @@
   <link rel="stylesheet" href="doar.css" />
   <style>
     /* Estilos para o botão voltar ao topo */
-    #btnTop {
-      display: none;
-      position: fixed;
-      bottom: 40px;
-      right: 40px;
-      z-index: 1000;
-      background-color: #0a3d62;
-      color: white;
-      border: none;
-      padding: 12px 16px;
-      font-size: 24px;
-      border-radius: 50%;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(10, 61, 98, 0.7);
-      transition: background-color 0.3s ease;
-    }
+    
+  #btnTop {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1000;
+    background-color: #0a3d62;
+    color: white;
+    border: none;
+    padding: 16px 20px;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(10, 61, 98, 0.7);
+    transition: background-color 0.3s ease;
+  }
 
-    #btnTop:hover {
-      background-color: #054a91;
-    }
+  #btnTop:hover {
+    background-color: #054a91;
+  }
+</style>
+
 
     footer {
       background-color: #001a4d;
@@ -50,26 +53,28 @@
     }
   </style>
 </head>
-<body>
+<body class="fundo-azulzinho">
+
   <!-- Cabeçalho fixo igual ao index -->
-  <header>
-    <span>Instituto Divina Luz</span>
-    <nav>
-      <ul>
-        <li><a href="index.html#sobre">Nosso Propósito</a></li>
-        <li><a href="index.html#atuacao">Nossa Atuação e Impacto</a></li>
-        <li><a href="index.html#doacoes">Doações</a></li>
-      </ul>
-    </nav>
-  </header>
+ <header>
+  <span class="titulo-site">Instituto Divina Luz</span>
+  <nav>
+    <ul>
+      <li><a href="#sobre">Nosso Propósito</a></li>
+      <li><a href="#atuacao">Nossa Atuação e Impacto</a></li>
+      <li><a href="#doacoes">Doações</a></li>
+    </ul>
+  </nav>
+</header>
+
 
   <!-- Banner igual ao do index, texto alinhado à direita, título branco -->
-  <section class="hero" style="background-image: url('C:/Users/sophi/Desktop/pratica extencionista/imagens/doacoes.png');">
+  <section class="hero" style="background-image: url('./imagens/doacoes.png');">
     <div class="overlay"></div>
     <div class="hero-content texto-direita">
       <h1 class="titulo-branco">A importância de sua doação</h1>
       <p>
-        Sua contribuição é essencial para o Instituto Divina Luz continuar transformando vidas. Seja com roupas, móveis, doações financeiras ou cupons fiscais, cada ajuda faz a diferença para as famílias que atendemos. Doe e faça parte dessa transformação!
+        Sua doação transforma vidas. Com ela, oferecemos apoio a crianças, idosos e pessoas com deficiência em situação de vulnerabilidade. Seja com roupas, móveis, doações financeiras ou cupons fiscais, cada contribuição garante cuidados, educação, inclusão e dignidade. Juntos, fazemos a diferença na vida de quem mais precisa.
       </p>
     </div>
   </section>
@@ -99,7 +104,7 @@
         </ul>
       </div>
       <div class="imagem">
-        <img src="C:/Users/sophi/Desktop/pratica extencionista/imagens/deficiente.jpg" alt="Bazar Permanente" />
+        <img src="./imagens/deficiente.jpg" alt="Bazar Permanente" />
       </div>
     </section>
 
@@ -114,22 +119,25 @@
         <p><strong>Banco do Brasil – Agência: 6842-0 – Conta Corrente: 39.601-0</strong></p>
       </div>
       <div class="imagem">
-        <img src="C:/Users/sophi/Desktop/pratica extencionista/imagens/criança padrinho.jpg" alt="Apadrinhamento" />
+        <img src="./imagens/criança padrinho.jpg" alt="Apadrinhamento" />
       </div>
     </section>
 
     <!-- Botão Quero Doar -->
-    <div class="btn-doar-container">
-      <a href="doar.html" class="btn-doar">Quero Doar</a>
-    </div>
+    <div class="btn-doar-container fade-in">
+  <a href="doar.html" class="btn-doar pulsante">Quero Doar</a>
+</div>
+
   </main>
 
   <!-- Botão Voltar ao topo -->
   <button id="btnTop" title="Voltar ao topo">↑</button>
 
   <footer>
-    <p>&copy; 2025 Instituto Divina Luz. Todos os direitos reservados.</p>
-  </footer>
+  <p>&copy; 2025 Todos os direitos reservados.</p>
+  <p>Desenvolvido por <strong>Maria Julia Gomes</strong> e <strong>Sophia Vasco Pires</strong>.</p>
+</footer>
+
 
   <script>
     // Scroll suave para os links do menu
@@ -161,3 +169,4 @@
   </script>
 </body>
 </html>
+
