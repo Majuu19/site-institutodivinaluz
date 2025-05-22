@@ -1,0 +1,234 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonte e estilos gerais */
+body, main, section, p, ul, li {
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  color: #222;
+  text-align: justify;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* Container geral da página */
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Justifica parágrafos imediatamente após h1 */
+h1 + p {
+  text-align: justify;
+}
+
+/* Título do banner e outros h1 padrão */
+h1 {
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: #001a4d;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Alinha o primeiro h1 dentro do main para a esquerda */
+main > h1:first-of-type {
+  text-align: left;
+}
+
+/* Seções de doação */
+section.doacao {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  gap: 40px;
+}
+
+/* Texto da seção doação */
+section.doacao .texto {
+  flex: 1;
+  max-width: 600px;
+}
+
+/* Títulos h2 dentro da seção doação */
+section.doacao .texto h2 {
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #0a3d62;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* Justificar parágrafos da seção doação */
+section.doacao .texto p {
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+/* Imagens na seção doação */
+section.doacao .imagem {
+  flex: 1;
+  max-width: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,80,0.2);
+}
+
+section.doacao .imagem img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Alterna ordem para a segunda seção */
+section.doacao.apadrinhamento {
+  flex-direction: row-reverse;
+}
+
+/* Lista estilizada na seção doação */
+section.doacao ul {
+  list-style: none;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+section.doacao ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  text-align: justify;
+}
+
+section.doacao ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 8px;
+  height: 8px;
+  background-color: #0a3d62;
+  border-radius: 1px;
+}
+
+/* Botão Quero Doar */
+.btn-doar-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.btn-doar {
+  background: linear-gradient(135deg, #0a3d62, #1866b0);
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 12px 35px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(10, 61, 98, 0.6);
+  text-decoration: none;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.btn-doar:hover {
+  background: linear-gradient(135deg, #1866b0, #0a3d62);
+  box-shadow: 0 8px 25px rgba(10, 61, 98, 0.8);
+  transform: scale(1.05);
+}
+
+.btn-doar:active {
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
+}
+
+/* Banner hero */
+.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 40px;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.hero-content {
+  max-width: 600px;
+  text-align: right;
+}
+
+.hero-content h1 {
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero-content p {
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #fff;
+  text-align: right;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  section.doacao {
+    flex-direction: column;
+  }
+  section.doacao.apadrinhamento {
+    flex-direction: column;
+  }
+  section.doacao .imagem,
+  section.doacao .texto {
+    max-width: 100%;
+    text-align: center !important;
+  }
+  main {
+    margin: 20px auto;
+    padding: 0 10px;
+    text-align: center !important;
+  }
+  .hero {
+    height: auto;
+    padding: 20px;
+    justify-content: center;
+  }
+  .hero-content {
+    max-width: 100%;
+    text-align: center !important;
+  }
+}
+
+/* Rodapé */
+footer {
+  background-color: #001a4d;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 40px 10%;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ccc;
+  text-decoration: underline;
+}

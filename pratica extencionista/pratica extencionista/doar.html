@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Doações - Instituto Divina Luz</title>
+  <link rel="stylesheet" href="inicio.css" />
+  <link rel="stylesheet" href="doar.css" />
+  <style>
+    /* Estilos para o botão voltar ao topo */
+    #btnTop {
+      display: none;
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      z-index: 1000;
+      background-color: #0a3d62;
+      color: white;
+      border: none;
+      padding: 12px 16px;
+      font-size: 24px;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(10, 61, 98, 0.7);
+      transition: background-color 0.3s ease;
+    }
+
+    #btnTop:hover {
+      background-color: #054a91;
+    }
+
+    footer {
+      background-color: #001a4d;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      padding: 40px 10%;
+      font-size: 14px;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #ccc;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Cabeçalho fixo igual ao index -->
+  <header>
+    <span>Instituto Divina Luz</span>
+    <nav>
+      <ul>
+        <li><a href="index.html#sobre">Nosso Propósito</a></li>
+        <li><a href="index.html#atuacao">Nossa Atuação e Impacto</a></li>
+        <li><a href="index.html#doacoes">Doações</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Banner igual ao do index, texto alinhado à direita, título branco -->
+  <section class="hero" style="background-image: url('C:/Users/sophi/Desktop/pratica extencionista/imagens/doacoes.png');">
+    <div class="overlay"></div>
+    <div class="hero-content texto-direita">
+      <h1 class="titulo-branco">A importância de sua doação</h1>
+      <p>
+        Sua contribuição é essencial para o Instituto Divina Luz continuar transformando vidas. Seja com roupas, móveis, doações financeiras ou cupons fiscais, cada ajuda faz a diferença para as famílias que atendemos. Doe e faça parte dessa transformação!
+      </p>
+    </div>
+  </section>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <h1>Modos de doações</h1>
+    <p class="intro-doar">
+    </p>
+    <!-- Bazar Permanente -->
+    <section class="doacao bazar">
+      <div class="texto">
+        <h2>Bazar Permanente de Usados</h2>
+        <p>O Instituto Divina Luz mantém um bazar permanente de usados para apoiar nossas ações. Estamos localizados na Rua São José, 213, Centro, Ribeirão Preto. Entre em contato pelo telefone: (16) 99416-6663.</p>
+
+        <p><strong>Aceitamos doações de:</strong></p> 
+        <ul>
+          <li>Roupas femininas, masculinas e infantis</li>
+          <li>Roupas PLUS SIZE</li>
+          <li>Sapatos em geral</li>
+          <li>Utensílios domésticos</li>
+          <li>Eletrodomésticos funcionando</li>
+          <li>Móveis em bom estado</li>
+          <li>Decorações</li>
+          <li>Cama, mesa e banho</li>
+          <li>Acessórios e bijuterias</li>
+        </ul>
+      </div>
+      <div class="imagem">
+        <img src="C:/Users/sophi/Desktop/pratica extencionista/imagens/deficiente.jpg" alt="Bazar Permanente" />
+      </div>
+    </section>
+
+    <!-- Doação Mensal / Apadrinhamento -->
+    <section class="doacao apadrinhamento">
+      <div class="texto">
+        <h2>Doação Mensal ou Apadrinhamento</h2>
+        <p>Você pode escolher o valor da sua contribuição mensal como padrinho ou madrinha. Disponibilizamos boletos para facilitar o pagamento. Entre em contato para mais informações.</p>
+
+        <h2>Doação Única</h2>
+        <p>Se preferir doar uma vez, o valor fica a seu critério. As doações podem ser feitas via PIX (chave CNPJ: 31.635.351/0001-00) ou depósito bancário:</p>
+        <p><strong>Banco do Brasil – Agência: 6842-0 – Conta Corrente: 39.601-0</strong></p>
+      </div>
+      <div class="imagem">
+        <img src="C:/Users/sophi/Desktop/pratica extencionista/imagens/criança padrinho.jpg" alt="Apadrinhamento" />
+      </div>
+    </section>
+
+    <!-- Botão Quero Doar -->
+    <div class="btn-doar-container">
+      <a href="doar.html" class="btn-doar">Quero Doar</a>
+    </div>
+  </main>
+
+  <!-- Botão Voltar ao topo -->
+  <button id="btnTop" title="Voltar ao topo">↑</button>
+
+  <footer>
+    <p>&copy; 2025 Instituto Divina Luz. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // Scroll suave para os links do menu
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetID = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetID);
+        if(targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Botão voltar ao topo
+    const btnTop = document.getElementById('btnTop');
+
+    window.onscroll = function() {
+      if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        btnTop.style.display = "block";
+      } else {
+        btnTop.style.display = "none";
+      }
+    };
+
+    btnTop.onclick = function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
+</body>
+</html>

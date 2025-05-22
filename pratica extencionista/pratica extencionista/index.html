@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instituto Divina Luz</title>
+  <link rel="stylesheet" href="inicio.css" />
+  <style>
+    /* Estilo simples para botão voltar ao topo */
+    #btnTopo {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      display: none;
+      background-color: #0a3d62;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 50px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(10, 61, 98, 0.7);
+      z-index: 150;
+      transition: background-color 0.3s ease;
+    }
+    #btnTopo:hover {
+      background-color: #1866b0;
+    }
+  </style>
+</head>
+<header>
+  <span>Instituto Divina Luz</span>
+  <nav>
+    <ul>
+      <li><a href="#sobre">Nosso Propósito</a></li>
+      <li><a href="#atuacao">Nossa Atuação e Impacto</a></li>
+      <li><a href="#doacoes">Doações</a></li>
+    </ul>
+  </nav>
+</header>
+
+<body>
+
+  <!-- Hero com fundo -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Instituto Divina Luz</h1>
+      <p>Atendimento domiciliar para pessoas com deficiências múltiplas e severas em Ribeirão Preto e região.</p>
+    </div>
+  </section>
+
+  <!-- Seções -->
+  <section id="sobre">
+    <h2>Nosso Propósito</h2>
+    <p>
+      Contribuindo com nosso trabalho, você ajuda a viabilizar projetos que buscam reduzir desigualdades e transformar a realidade de mais de 200 crianças, adolescentes e idosos na cidade de Ribeirão Preto. Nosso objetivo é beneficiar não só essas pessoas, mas também suas famílias e toda a comunidade onde vivem. Para isso, contamos com apoio financeiro que cobre despesas mensais essenciais para manter e ampliar nossas ações.
+    </p>
+
+    <img src="C:/Users/sophi/Desktop/pratica extencionista/imagens/deficiente fisico criança.jpg" alt="Criança com deficiência física" class="imagem-proposito" />
+<br>
+    <section id="atuacao"></section>
+    <h2>Nossa Atuação e Impacto</h2>
+    <p>
+      Diante das condições precárias de trabalho, especialmente enfrentadas pela população negra em Ribeirão Preto e região, e do aumento do desemprego agravado pela pandemia da COVID-19, muitas crianças e adolescentes acabam em situação de trabalho infantil. Nosso projeto atua diretamente para combater essa realidade por meio de oficinas lúdicas, culturais e recreativas (como percussão, capoeira, workshop de barbearia e cuidados com cabelos crespos e cacheados). Também oferecemos cursos de qualificação profissional e acompanhamento psicossocial, pedagógico e social, além de encaminhamentos para a rede socioassistencial, garantindo um suporte contínuo para esses jovens e suas famílias.
+    </p>
+
+        <img src="C:/Users/sophi/Desktop/pratica extencionista/imagens/criança na escola.jpeg" alt="Criança na escola" class="imagem-escola" />
+
+<br>
+    
+    <section id="doacoes"></section>
+    <h2>Doações</h2>
+    <p>
+      Sua ajuda é fundamental para continuarmos nosso trabalho transformador. O Instituto Divina Luz recebe doações de várias formas: você pode contribuir com roupas, utensílios e móveis para nosso bazar, fazer doações mensais ou únicas em dinheiro, ou ainda doar seus cupons fiscais pela Nota Fiscal Paulista. Cada contribuição faz a diferença na vida das famílias que atendemos. Conheça as formas de ajudar e faça parte dessa transformação!
+    </p>
+    <img src="C:/Users/sophi/Desktop/pratica extencionista/imagens/menina com sindrome de down.jpg" alt="Menina com síndrome de Down" class="imagem-doacoes" />
+
+     <a href="doar.html" class="btn-doar">Quero Doar</a>
+
+  </section>
+
+ 
+  <section id="localizacao">
+    <h2>Localização</h2>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=..." 
+      width="100%" 
+      height="450" 
+      style="border:0;" 
+      allowfullscreen 
+      loading="lazy">
+    </iframe>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Instituto Divina Luz. Todos os direitos reservados.</p>
+  </footer>
+
+  <button id="btnTopo" title="Voltar ao topo">↑</button>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Scroll suave para links internos do menu
+      const links = document.querySelectorAll('header nav ul li a[href^="#"]');
+      links.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetID = link.getAttribute('href').substring(1);
+          const targetSection = document.getElementById(targetID);
+          if (targetSection) {
+            window.scrollTo({
+              top: targetSection.offsetTop - 70,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      // Mostrar/esconder botão voltar ao topo
+      const btnTopo = document.getElementById('btnTopo');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          btnTopo.style.display = 'block';
+        } else {
+          btnTopo.style.display = 'none';
+        }
+      });
+      btnTopo.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+
+      // Realce dinâmico no menu
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('header nav ul li a');
+
+      window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 80;
+          if (window.scrollY >= sectionTop) {
+            current = section.getAttribute('id');
+          }
+        });
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href').substring(1) === current) {
+            link.classList.add('active');
+          }
+        });
+      });
+
+    });
+  </script>
+</body>
+</html>
