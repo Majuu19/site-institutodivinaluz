@@ -161,6 +161,10 @@ section.doacao ul li::before {
   padding-right: 40px;
   color: white;
   font-family: Arial, sans-serif;
+  
+  padding-top: 100px; /* aumente esse valor se necessário */
+
+
 }
 
 .hero-content {

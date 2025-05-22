@@ -12,6 +12,9 @@ body {
   line-height: 1.6;
   color: #222;
   padding-top: 50px; 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* 100% da altura da tela */
 }
 
 
@@ -409,12 +412,15 @@ nav ul li a.active {
 
 footer {
   background-color: #001a4d;
-  color: #ccc;
+  color: #fff;
   font-family: Arial, sans-serif;
-  padding: 40px 10%;
+  padding: 60px 10% 40px; /* topo maior para afastar do mapa */
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 0;
 }
+
 
 .footer-newsletter {
   display: flex;
@@ -649,4 +655,12 @@ footer p strong {
   width: 100%;
   text-align: center;
   margin-top: 40px;
+}
+
+html, body {
+  height: 100%;
+}
+
+main {
+  flex: 1;
 }
