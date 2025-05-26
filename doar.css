@@ -1,0 +1,269 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, main, section, p, ul, li {
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  color: #222;
+  text-align: justify;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h1 + p {
+  text-align: justify;
+}
+
+
+h1 {
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: #001a4d;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+main > h1:first-of-type {
+  text-align: left;
+}
+
+.titulo-site {
+  font-family: Arial, sans-serif;
+  font-size: 30px;               
+  font-weight: 800;              
+  color: #fff;                  
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); 
+}
+
+section.doacao {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  gap: 40px;
+}
+
+section.doacao .texto {
+  flex: 1;
+  max-width: 600px;
+}
+
+section.doacao .texto h2 {
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #0a3d62;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+section.doacao .texto p {
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+
+section.doacao .imagem {
+  flex: 1;
+  max-width: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,80,0.2);
+}
+
+section.doacao .imagem img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+section.doacao.apadrinhamento {
+  flex-direction: row-reverse;
+}
+
+section.doacao ul {
+  list-style: none;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+section.doacao ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  text-align: justify;
+}
+
+section.doacao ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 8px;
+  height: 8px;
+  background-color: #0a3d62;
+  border-radius: 1px;
+}
+
+.btn-doar-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.btn-doar {
+  background: linear-gradient(135deg, #0a3d62, #1866b0);
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  padding: 20px 40px;   
+  font-size: 22px;      
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 8px 25px rgba(10, 61, 98, 0.4);
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+.btn-doar:hover {
+  background: linear-gradient(135deg, #1866b0, #0a3d62);
+  box-shadow: 0 10px 30px rgba(10, 61, 98, 0.6);
+  transform: scale(1.07);
+}
+
+.btn-doar:active {
+  transform: scale(0.97);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 40px;
+  color: white;
+  font-family: Arial, sans-serif;
+  
+  padding-top: 100px; /* aumente esse valor se necessário */
+
+
+}
+
+.hero-content {
+  max-width: 600px;
+  text-align: right;
+}
+
+.hero-content h1 {
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero-content p {
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #fff;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  
+  .btn-doar {
+    padding: 18px 36px;
+    font-size: 20px;
+  }
+
+  section.doacao {
+    flex-direction: column;
+  }
+  section.doacao.apadrinhamento {
+    flex-direction: column;
+  }
+  section.doacao .imagem,
+  section.doacao .texto {
+    max-width: 100%;
+    text-align: center !important;
+  }
+  main {
+    margin: 20px auto;
+    padding: 0 10px;
+    text-align: center !important;
+  }
+  .hero {
+    height: auto;
+    padding: 20px;
+    justify-content: center;
+  }
+  .hero-content {
+    max-width: 100%;
+    text-align: center !important;
+  }
+}
+
+
+footer {
+  background-color: #001a4d;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 40px 10%;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ccc;
+  text-decoration: underline;
+}
+.fundo-azulzinho {
+  background-color: #e6f0ff;
+}
+
+.pulsante {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(10, 61, 98, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(10, 61, 98, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(10, 61, 98, 0.4);
+  }
+}
+
+.botao-centralizado {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+}
+
