@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instituto Divina Luz</title>
+  <link rel="stylesheet" href="inicio.css" />
+  <style>
+    /* Estilo simples para botão voltar ao topo */
+    #btnTopo {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: none;
+      background-color: #0a3d62;
+      color: white;
+      border: none;
+      padding: 16px 20px;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(10, 61, 98, 0.7);
+      z-index: 150;
+      transition: background-color 0.3s ease;
+    }
+    #btnTopo:hover {
+      background-color: #1866b0;
+    }
+  </style>
+</head>
+<header>
+  <span class="titulo-site">Instituto Divina Luz</span>
+  <nav>
+    <ul>
+      <li><a href="#sobre">Nosso Propósito</a></li>
+      <li><a href="#atuacao">Nossa Atuação e Impacto</a></li>
+      <li><a href="#doacoes">Doações</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<body>
+
+  <!-- Hero com fundo -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Instituto Divina Luz</h1>
+      <p>Atendimento domiciliar para pessoas com deficiências múltiplas e severas em Ribeirão Preto e região.</p>
+    </div>
+  </section>
+
+  <!-- Seções -->
+  <section id="sobre">
+  <div class="container-sobre">
+    <div class="imagem-sobre">
+      <img src="./imagens/deficiente fisico criança.jpg" alt="Criança com deficiência física" />
+    </div>
+    <div class="texto-sobre">
+      <h2>Nosso Propósito</h2>
+      <p>
+        Contribuindo com nosso trabalho, você ajuda a viabilizar projetos que buscam reduzir desigualdades e transformar a realidade de mais de 200 crianças, adolescentes e idosos na cidade de Ribeirão Preto. Nosso objetivo é beneficiar não só essas pessoas, mas também suas famílias e toda a comunidade onde vivem. Para isso, contamos com apoio financeiro que cobre despesas mensais essenciais para manter e ampliar nossas ações.
+      </p>
+    </div>
+  </div>
+
+   
+<br>
+    <section id="atuacao">
+  <div class="container-sobre reverso">
+    <div class="imagem-sobre">
+      <img src="./imagens/criança na escola.jpeg" alt="Criança na escola" />
+    </div>
+    <div class="texto-sobre">
+      <h2>Nossa Atuação e Impacto</h2>
+      <p>
+        Diante das condições precárias de trabalho, especialmente enfrentadas pela população negra em Ribeirão Preto e região, e do aumento do desemprego agravado pela pandemia da COVID-19, muitas crianças e adolescentes acabam em situação de trabalho infantil. Nosso projeto atua diretamente para combater essa realidade por meio de oficinas lúdicas, culturais e recreativas (como percussão, capoeira, workshop de barbearia e cuidados com cabelos crespos e cacheados). Também oferecemos cursos de qualificação profissional e acompanhamento psicossocial, pedagógico e social, além de encaminhamentos para a rede socioassistencial, garantindo um suporte contínuo para esses jovens e suas famílias.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+<br>
+ <section id="doacoes">
+  <div class="container-sobre">
+    <div class="imagem-sobre">
+      <img src="./imagens/menina com sindrome de down.jpg" alt="Menina com síndrome de Down" />
+    </div>
+
+    <div class="texto-sobre">
+      <h2>Doações</h2>
+      <p>
+        Sua ajuda é fundamental para continuarmos nosso trabalho transformador. O Instituto Divina Luz recebe doações de várias formas: você pode contribuir com roupas, utensílios e móveis para nosso bazar, fazer doações mensais ou únicas em dinheiro, ou ainda doar seus cupons fiscais pela Nota Fiscal Paulista. Cada contribuição faz a diferença na vida das famílias que atendemos. Conheça as formas de ajudar e faça parte dessa transformação!
+      </p>
+    </div>
+  </div>
+
+  <div class="botao-centralizado">
+    <a href="doar.html" class="btn-doar pulsante">Quero Doar</a>
+  </div>
+</section>
+
+
+
+    
+  
+
+ 
+ <section id="localizacao">
+  <h2>Localização</h2>
+  <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.2237679288487!2d-47.80886332464037!3d-21.18326798050493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b9bee3cf669e8d%3A0x95481e6b5116ce4!2sR.%20Prudente%20de%20Morais%2C%201173%20-%20Centro%2C%20Ribeir%C3%A3o%20Preto%20-%20SP%2C%2014015-100!5e0!3m2!1spt-BR!2sbr!4v1742070923691!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+  width="100%" 
+  height="450" 
+  style="border:0; margin-bottom: 40px;"  <!-- ⬅️ aqui -->
+  allowfullscreen 
+  loading="lazy">
+</iframe>
+</main>
+
+</section>
+
+
+
+  
+ <footer>
+  <p>&copy; 2025 Todos os direitos reservados.</p>
+  <p>Desenvolvido por <strong>Maria Julia Gomes</strong> e <strong>Sophia Vasco Pires</strong>.</p>
+</footer>
+
+
+  <button id="btnTopo" title="Voltar ao topo">↑</button>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      
+      const links = document.querySelectorAll('header nav ul li a[href^="#"]');
+      links.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetID = link.getAttribute('href').substring(1);
+          const targetSection = document.getElementById(targetID);
+          if (targetSection) {
+            window.scrollTo({
+              top: targetSection.offsetTop - 70,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      // Mostrar/esconder botão voltar ao topo
+      const btnTopo = document.getElementById('btnTopo');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          btnTopo.style.display = 'block';
+        } else {
+          btnTopo.style.display = 'none';
+        }
+      });
+      btnTopo.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+
+      // Realce dinâmico no menu
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('header nav ul li a');
+
+      window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 80;
+          if (window.scrollY >= sectionTop) {
+            current = section.getAttribute('id');
+          }
+        });
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href').substring(1) === current) {
+            link.classList.add('active');
+          }
+        });
+      });
+
+    });
+  </script>
+</body>
+</html>
